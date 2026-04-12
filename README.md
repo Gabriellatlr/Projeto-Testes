@@ -41,7 +41,7 @@ Resultado obtido:
 ### 1. Clonar o repositório
 
 ```bash
-git clone <link-do-repositorio>
+git clone <https://github.com/Gabriellatlr/Projeto-Testes.git>
 ```
 
 ### 2. Executar os testes
