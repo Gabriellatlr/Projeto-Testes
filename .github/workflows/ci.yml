@@ -28,7 +28,7 @@ jobs:
       run: python --version
 
     - name: Executar testes unitários
-      run: python -m unittest testes_unitarios/test_notas.py
+      run: PYTHONPATH=. python -m unittest testes_unitarios/test_notas.py
 
     - name: Executar testes de integração
-      run: python -m unittest testes_integracao/test_integracao_notas.py
+      run: PYTHONPATH=. python -m unittest testes_integracao/test_integracao_notas.py
