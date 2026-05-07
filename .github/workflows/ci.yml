@@ -28,7 +28,11 @@ jobs:
       run: python --version
 
     - name: Executar testes unitários
-      run: PYTHONPATH=. python -m unittest testes_unitarios/test_notas.py
+      run: |
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        python -m unittest discover -s testes_unitarios
 
     - name: Executar testes de integração
-      run: PYTHONPATH=. python -m unittest testes_integracao/test_integracao_notas.py
+      run: |
+        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        python -m unittest discover -s testes_integracao
