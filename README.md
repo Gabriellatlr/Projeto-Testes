@@ -1,4 +1,4 @@
-# 📘 Projeto de Testes Unitários, Refatoração e Cobertura de Código
+# 📘 Projeto de Testes
 
 ## 📌 Descrição
 
