@@ -1,69 +1,103 @@
-# 📘 Projeto de Testes Unitários e Cobertura de Código
+# 📘 Projeto de Testes Unitários, Refatoração e Cobertura de Código
 
 ## 📌 Descrição
 
-Este projeto foi desenvolvido com o objetivo de aplicar práticas de testes de software, utilizando testes unitários e análise de cobertura de código em um módulo simples em Python.
+Este projeto foi desenvolvido com o objetivo de aplicar conceitos de testes de software, integração contínua (CI/CD), cobertura de código e refatoração orientada a testes utilizando Python.
 
-O sistema implementa funcionalidades relacionadas ao cálculo e análise de notas de alunos.
-
----
-
-## ⚙️ Funcionalidades
-
-* Cálculo da média de notas
-* Verificação da situação do aluno (Aprovado, Recuperação ou Reprovado)
-* Identificação da maior nota
+O sistema implementa funcionalidades relacionadas ao cálculo e análise de notas de alunos, além de aplicar boas práticas de qualidade de software e automação de testes.
 
 ---
 
-## 🧪 Testes Unitários
+# ⚙️ Funcionalidades
 
-Foram implementados testes unitários utilizando a biblioteca `unittest`, cobrindo:
-
-* Casos normais (funcionamento esperado)
-* Casos de erro (listas vazias)
-* Casos de limite (notas nos limites de aprovação)
-
----
-
-## 📊 Cobertura de Código
-
-A cobertura de código foi analisada utilizando a ferramenta `coverage`.
-
-Resultado obtido:
-
-> Cobertura total: 97% (excelente cobertura de testes)
-> A cobertura de 97% indica que praticamente todas as funcionalidades foram testadas, reduzindo significativamente o risco de falhas no sistema.
+- Cálculo da média de notas
+- Verificação da situação do aluno:
+  - Aprovado
+  - Recuperação
+  - Reprovado
+- Identificação da maior nota
+- Validação de entradas inválidas
+- Tratamento de listas vazias
 
 ---
 
-## ▶️ Como executar o projeto
+# 🧪 Testes Automatizados
 
-### 1. Clonar o repositório
+O projeto utiliza a biblioteca `unittest` para execução dos testes automatizados.
+
+Foram implementados:
+
+## ✅ Testes Unitários
+Cobrem:
+- cálculo de média;
+- validação de aprovação;
+- identificação da maior nota;
+- tratamento de exceções;
+- validação de tipos inválidos.
+
+## ✅ Testes de Integração
+Validam o fluxo completo do sistema:
+- cálculo da média;
+- classificação do aluno;
+- integração entre funções.
+
+---
+
+# 📊 Cobertura de Código
+
+A cobertura de código foi analisada utilizando a ferramenta `coverage.py`.
+
+## Resultado Obtido
+
+| Arquivo | Cobertura |
+|---|---|
+| notas.py | 100% |
+| test_integracao_notas.py | 94% |
+| test_notas.py | 96% |
+| **TOTAL** | **96%** |
+
+A alta cobertura indica que a maior parte das funcionalidades foi validada por testes automatizados, reduzindo significativamente o risco de falhas.
+
+---
+
+# 🔧 Refatoração Realizada
+
+O projeto passou por processo de refatoração orientada a testes visando melhorar:
+
+- legibilidade;
+- reutilização de código;
+- robustez;
+- organização estrutural;
+- validação de dados.
+
+## Melhorias implementadas
+
+- criação da função `validar_notas()`;
+- redução de duplicação de código;
+- melhoria nos nomes de funções;
+- validação de tipos de entrada;
+- aumento da coesão das funções;
+- melhoria da manutenção futura do sistema.
+
+Todas as alterações foram realizadas mantendo os testes automatizados funcionando corretamente.
+
+---
+
+# 🚀 Integração Contínua (CI/CD)
+
+O projeto utiliza GitHub Actions para execução automática dos testes a cada `push` ou `pull request`.
+
+O pipeline realiza:
+- configuração do ambiente Python;
+- execução dos testes unitários;
+- execução dos testes de integração;
+- validação automática do sistema.
+
+---
+
+# ▶️ Como executar o projeto
+
+## 1. Clonar o repositório
 
 ```bash
-git clone <https://github.com/Gabriellatlr/Projeto-Testes.git>
-```
-
-### 2. Executar os testes
-
-```bash
-python -m unittest test_notas.py
-```
-
----
-
-## 📈 Como gerar cobertura de código
-
-```bash
-python -m coverage run -m unittest test_notas.py
-python -m coverage report
-python -m coverage html
-```
-
----
-
-
-## 🧠 Autor
-
-Projeto desenvolvido para fins acadêmicos na disciplina de Testes e Qualidade de Software.
+git clone https://github.com/Gabriellatlr/Projeto-Testes.git
